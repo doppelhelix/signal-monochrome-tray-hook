@@ -1,0 +1,9 @@
+# Ignore everything
+*
+
+# But not these files...
+!.gitignore
+!signal-tray
+!signal-tray.hook
+!README.md
+!LICENSE

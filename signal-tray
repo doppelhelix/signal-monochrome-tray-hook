@@ -1,0 +1,14 @@
+#!/bin/bash
+
+app_asar=$(pacman -Ql signal-desktop | grep -o '[^ ]\+app\.asar$')
+tmp="/tmp/signal-tray"
+rm -Rf $tmp
+if [[ -w "$app_asar" ]]; then
+    asar extract /usr/lib/signal-desktop/resources/app.asar $tmp
+    magick \
+        -background none \
+        /usr/share/icons/Papirus/22x22/panel/signal-tray.svg \
+        $tmp/images/icon_32.png >>/dev/null 2>&1
+    asar pack $tmp /usr/lib/signal-desktop/resources/app.asar
+    rm -Rf $tmp
+fi
