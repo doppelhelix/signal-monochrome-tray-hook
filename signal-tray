@@ -6,8 +6,8 @@ rm -Rf $tmp
 if [[ -w "$app_asar" ]]; then
     asar extract /usr/lib/signal-desktop/resources/app.asar $tmp
     rsvg-convert \
-        -w 16 -h 16 \
-        /usr/share/icons/Papirus-Light/16x16/panel/signal-tray.svg \
+        -w 22 -h 22 \
+        /usr/share/icons/Papirus-Light/22x22/panel/signal-tray.svg \
         -o $tmp/images/tray-icons/base/signal-tray-icon-16x16-light-base.png  >>/dev/null 2>&1
 
     rsvg-convert \
