@@ -11,6 +11,11 @@ if [[ -w "$app_asar" ]]; then
         -o $tmp/images/tray-icons/base/signal-tray-icon-16x16-light-base.png  >>/dev/null 2>&1
 
     rsvg-convert \
+        -w 22 -h 22 \
+        /usr/share/icons/Papirus/22x22/panel/signal-tray.svg \
+        -o $tmp/images/tray-icons/base/signal-tray-icon-16x16-dark-base.png  >>/dev/null 2>&1
+
+    rsvg-convert \
         -w 32 -h 32 \
         /usr/share/icons/Papirus-Light/24x24/panel/signal-tray.svg \
         -o $tmp/images/tray-icons/base/signal-tray-icon-32x32-light-base.png  >>/dev/null 2>&1
