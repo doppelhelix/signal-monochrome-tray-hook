@@ -5,30 +5,26 @@ tmp="/tmp/signal-tray"
 rm -Rf $tmp
 if [[ -w "$app_asar" ]]; then
     asar extract /usr/lib/signal-desktop/resources/app.asar $tmp
-    rsvg-convert \
-        -w 22 -h 22 \
-        /usr/share/icons/Papirus-Light/22x22/panel/signal-tray.svg \
-        -o $tmp/images/tray-icons/base/signal-tray-icon-16x16-light-base.png  >>/dev/null 2>&1
 
     rsvg-convert \
         -w 22 -h 22 \
         /usr/share/icons/Papirus/22x22/panel/signal-tray.svg \
-        -o $tmp/images/tray-icons/base/signal-tray-icon-16x16-dark-base.png  >>/dev/null 2>&1
+        -o $tmp/images/tray-icons/base/signal-tray-icon-16x16-base.png  >>/dev/null 2>&1
 
     rsvg-convert \
         -w 32 -h 32 \
-        /usr/share/icons/Papirus-Light/24x24/panel/signal-tray.svg \
-        -o $tmp/images/tray-icons/base/signal-tray-icon-32x32-light-base.png  >>/dev/null 2>&1
+        /usr/share/icons/Papirus/24x24/panel/signal-tray.svg \
+        -o $tmp/images/tray-icons/base/signal-tray-icon-32x32-base.png  >>/dev/null 2>&1
 
     rsvg-convert \
         -w 48 -h 48 \
-        /usr/share/icons/Papirus-Light/24x24/panel/signal-tray.svg \
-        -o $tmp/images/tray-icons/base/signal-tray-icon-48x48-light-base.png  >>/dev/null 2>&1
+        /usr/share/icons/Papirus/24x24/panel/signal-tray.svg \
+        -o $tmp/images/tray-icons/base/signal-tray-icon-48x48-base.png  >>/dev/null 2>&1
 
     rsvg-convert \
         -w 256 -h 256 \
-        /usr/share/icons/Papirus-Light/24x24/panel/signal-tray.svg \
-        -o $tmp/images/tray-icons/base/signal-tray-icon-256x256-light-base.png  >>/dev/null 2>&1
+        /usr/share/icons/Papirus/24x24/panel/signal-tray.svg \
+        -o $tmp/images/tray-icons/base/signal-tray-icon-256x256-base.png  >>/dev/null 2>&1
 
     asar pack $tmp /usr/lib/signal-desktop/resources/app.asar
     rm -Rf $tmp

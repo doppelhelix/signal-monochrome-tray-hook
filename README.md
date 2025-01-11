@@ -4,6 +4,9 @@
 This script will change the tray-icons of [signal-desktop](https://archlinux.org/packages/extra/x86_64/signal-desktop/)
  to monochrome.
 
+Unfortunately this is now limited to dark themes. see github issues [7082](https://github.com/signalapp/Signal-Desktop/issues/7082)
+ and [7095](https://github.com/signalapp/Signal-Desktop/issues/7095)
+
 This script depends on
 
 - [asar](https://archlinux.org/packages/extra/any/asar/)
